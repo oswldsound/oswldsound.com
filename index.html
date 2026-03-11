@@ -5,83 +5,67 @@
 <title>Oswld Sound</title>
 <style>
 body {
-  background-color: #0F1214;
+  margin: 0;
+  background: #0F1214;
   color: white;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  text-align: center;
 }
 
 .container {
-  max-width: 700px;
-  width: 100%;
-  padding: 40px 20px;
+  text-align: center;
 }
 
 h1 {
-  font-size: 3.5em;
-  margin: 0 0 10px 0;
+  font-size: 3.5rem;
   font-weight: 700;
+  margin: 0 0 10px 0;
 }
 
 h2 {
-  font-size: 1.4em;
+  font-size: 1.4rem;
   font-weight: 400;
-  margin-top: 0;
-  margin-bottom: 50px;
+  margin: 0 0 60px 0;
   color: #cccccc;
 }
 
-.section-title {
-  font-size: 1.2em;
-  font-weight: 600;
-  margin-top: 40px;
-  margin-bottom: 15px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-size: 1.5rem;
 }
 
-a {
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-  font-size: 1.3em;
-  margin: 12px 0;
-  padding-left: 0;
+.link {
   position: relative;
-  transition: all 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
 }
 
-a::before {
+.link.underline::after {
   content: '';
   position: absolute;
-  left: -20px;
-  bottom: 0;
-  width: 0;
+  width: 100%;
   height: 2px;
-  background-color: #00ffff;
-  transition: all 0.3s ease;
-}
-
-a:hover {
-  color: #00ffff;
-  transform: translateX(5px);
-}
-
-a:hover::before {
-  width: 20px;
+  background: #00ffff;
   left: 0;
+  bottom: -4px;
 }
 
-.footer {
-  margin-top: 80px;
-  font-size: 0.9em;
-  color: #888888;
+.link:hover.underline::after {
+  background: #00ffff;
+}
+
+.link.no-underline {
+  text-decoration: none;
+  color: white;
+}
+
+.link.no-underline:hover {
+  color: #00ffff;
 }
 </style>
 </head>
@@ -91,28 +75,11 @@ a:hover::before {
   <h1>Oswld Sound</h1>
   <h2>Close Your Eyes</h2>
 
-  <div class="section">
-    <div class="section-title">Beats</div>
-    <a href="https://oswldsound.beatstars.com" target="_blank">oswldsound.beatstars.com</a>
-  </div>
-
-  <div class="section">
-    <div class="section-title">Credits</div>
-    <a href="https://credits.muso.ai/profile/b9d6627c-d639-4b0f-bddc-f729d2612a7c" target="_blank">credits.muso.ai</a>
-  </div>
-
-  <div class="section">
-    <div class="section-title">Email</div>
-    <a href="mailto:os@oswldsound.com">os@oswldsound.com</a>
-  </div>
-
-  <div class="section">
-    <div class="section-title">Instagram</div>
-    <a href="https://www.instagram.com/oswldsound/" target="_blank">Instagram</a>
-  </div>
-
-  <div class="footer">
-    &copy; Oswld Sound
+  <div class="links">
+    <a href="https://oswldsound.beatstars.com" class="link underline" target="_blank">Beats</a>
+    <a href="https://credits.muso.ai/profile/b9d6627c-d639-4b0f-bddc-f729d2612a7c" class="link underline" target="_blank">Credits</a>
+    <a href="mailto:os@oswldsound.com" class="link no-underline">Email</a>
+    <a href="https://www.instagram.com/oswldsound/" class="link no-underline" target="_blank">Instagram</a>
   </div>
 </div>
 
