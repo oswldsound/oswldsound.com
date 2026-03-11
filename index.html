@@ -11,17 +11,14 @@ html, body {
   background: #000;
   color: #fff;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  display: flex;
-  align-items: center; /* vertical centrar */
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* izquierda */
+  align-items: flex-start;
+  padding: 120px 80px;
   gap: 50px;
-  padding: 0 80px; /* margen horizontal */
-  width: 100%;
 }
 
 /* Título principal */
@@ -78,7 +75,7 @@ h2 {
   color: #ddd;
 }
 
-/* Ajustes para móviles */
+/* Ajustes mínimos para móviles: solo fuente más pequeña */
 @media (max-width: 600px) {
   h1 {
     font-size: 2.5rem;
