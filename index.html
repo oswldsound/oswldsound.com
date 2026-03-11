@@ -6,102 +6,68 @@
 <style>
 body {
   margin: 0;
-  background: #0F1214;
-  color: white;
+  background: #000;
+  color: #fff;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  min-height: 100vh;
-  padding: 80px;
-}
-
-.container {
-  text-align: left;
+  padding: 120px 80px;
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: 5rem;
   font-weight: 700;
-  margin: 0 0 10px 0;
+  margin: 0 0 20px 0;
 }
 
 h2 {
-  font-size: 1.4rem;
+  font-size: 2rem;
   font-weight: 400;
-  margin: 0 0 60px 0;
-  color: #cccccc;
+  margin: 0 0 80px 0;
+  color: #ccc;
 }
 
 .links {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  font-size: 1.5rem;
+  gap: 50px;
+  font-size: 2rem;
 }
 
 .link {
   position: relative;
   display: inline-block;
   cursor: pointer;
-  color: white;
+  color: #fff;
   text-decoration: none;
-  transition: color 0.3s ease, transform 0.2s ease;
+  transition: color 0.25s ease, transform 0.2s ease;
 }
 
-.link.no-underline:hover {
-  color: #00ffff;
+.link:hover {
+  color: #ddd; /* hover gris tenue */
+}
+
+/* subrayado permanente */
+.link.underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: #fff;
 }
 </style>
 </head>
 <body>
 
-<div class="container">
-  <h1>Oswld Sound</h1>
-  <h2>Close Your Eyes</h2>
+<h1>Oswld Sound</h1>
+<h2>Close Your Eyes</h2>
 
-  <div class="links">
-    <a href="https://oswldsound.beatstars.com" class="link underline" target="_blank">Beats</a>
-    <a href="https://credits.muso.ai/profile/b9d6627c-d639-4b0f-bddc-f729d2612a7c" class="link underline" target="_blank">Credits</a>
-    <a href="mailto:os@oswldsound.com" class="link no-underline">Email</a>
-    <a href="https://www.instagram.com/oswldsound/" class="link no-underline" target="_blank">Instagram</a>
-  </div>
+<div class="links">
+  <a href="https://oswldsound.beatstars.com" class="link underline" target="_blank">Beats</a>
+  <a href="https://credits.muso.ai/profile/b9d6627c-d639-4b0f-bddc-f729d2612a7c" class="link underline" target="_blank">Credits</a>
+  <a href="mailto:os@oswldsound.com" class="link">Email</a>
+  <a href="https://www.instagram.com/oswldsound/" class="link" target="_blank">Instagram</a>
 </div>
-
-<script>
-// efecto de subrayado que sigue el cursor
-document.querySelectorAll('.link.underline').forEach(link => {
-  const underline = document.createElement('span');
-  underline.style.position = 'absolute';
-  underline.style.height = '2px';
-  underline.style.background = '#00ffff';
-  underline.style.bottom = '-4px';
-  underline.style.left = '50%';
-  underline.style.width = '0';
-  underline.style.transform = 'translateX(-50%)';
-  underline.style.transition = 'width 0.3s ease, left 0.1s ease';
-  link.appendChild(underline);
-
-  link.addEventListener('mousemove', e => {
-    const rect = link.getBoundingClientRect();
-    const offsetX = e.clientX - rect.left;
-    underline.style.left = offsetX + 'px';
-    underline.style.width = '100%';
-  });
-
-  link.addEventListener('mouseleave', () => {
-    underline.style.width = '0';
-    underline.style.left = '50%';
-  });
-
-  link.addEventListener('mouseenter', () => {
-    link.style.transform = 'translateY(-2px)';
-    link.style.color = '#00ffff';
-  });
-
-  link.addEventListener('mouseleave', () => {
-    link.style.transform = 'translateY(0)';
-    link.style.color = 'white';
-  });
-});
-</script>
 
 </body>
 </html>
