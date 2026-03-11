@@ -17,26 +17,25 @@ html, body {
 }
 body::-webkit-scrollbar { width: 0; background: transparent; }
 
-/* Alineación al borde como cristianrus.me */
 .container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 80px 60px; /* menos margen que antes */
+  padding: 120px 80px; /* desktop */
 }
 
 /* Título principal */
 h1 {
   font-size: 3rem;
   font-weight: 700;
-  margin: 0 0 15px 0; /* margen más ajustado */
+  margin: 0 0 20px 0;
 }
 
 /* Subtítulo = close your eyes */
 h2 {
   font-size: 1.25rem;
   font-weight: 400;
-  margin: 0 0 30px 0; /* menos espacio antes de enlaces */
+  margin: 0 0 40px 0; /* ahora igual que Credits → Email */
   color: #ccc;
   text-transform: lowercase;
 }
@@ -45,7 +44,7 @@ h2 {
 .main-links {
   display: flex;
   flex-direction: column;
-  gap: 30px; /* menos que antes */
+  gap: 40px;
   font-size: 2rem;
 }
 
@@ -53,9 +52,9 @@ h2 {
 .secondary-links {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 20px;
   font-size: 1.25rem;
-  margin-top: 40px; /* mantiene separación visual */
+  margin-top: 40px; /* mismo espacio que h2 → main-links */
   color: #aaa;
 }
 
@@ -72,9 +71,7 @@ h2 {
   text-decoration-color: #fff;
 }
 
-.link:hover {
-  color: #ddd;
-}
+.link:hover { color: #ddd; }
 
 /* Ajustes para móviles */
 @media (max-width: 600px) {
