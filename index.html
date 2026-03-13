@@ -6,12 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-/* Reset y ancho seguro */
-* {
-  box-sizing: border-box;
-  margin:0;
-  padding:0;
-}
+* { box-sizing: border-box; margin:0; padding:0; }
 
 body {
   background:#000;
@@ -25,28 +20,18 @@ body {
 body::-webkit-scrollbar { display:none; }
 
 .container {
-  max-width:800px;     /* ancho reducido para mover contenido a la derecha */
-  margin:0 auto;       /* centra el contenedor horizontalmente */
+  max-width:750px;     /* contenido más a la derecha con gusto */
+  margin:0 auto;       
   display:flex;
   flex-direction:column;
-  align-items:flex-start; /* textos alineados a la izquierda */
-  padding:120px 0;     /* padding vertical */
+  align-items:flex-start; 
+  padding:120px 0;     
   width:100%;
 }
 
-h1 {
-  font-size:3rem;
-  font-weight:700;
-  margin-bottom:20px;
-}
+h1 { font-size:3rem; font-weight:700; margin-bottom:20px; }
 
-h2 {
-  font-size:1.25rem;
-  font-weight:400;
-  margin-bottom:60px;
-  color:#ccc;
-  text-transform:lowercase;
-}
+h2 { font-size:1.25rem; font-weight:400; margin-bottom:60px; color:#ccc; text-transform:lowercase; }
 
 .main-links, .secondary-links {
   display:flex;
@@ -54,34 +39,18 @@ h2 {
   width:100%;
 }
 
-.main-links {
-  gap:30px;
-  font-size:2rem;
-}
+.main-links { gap:30px; font-size:2rem; }
 
-.secondary-links {
-  gap:30px;
-  margin-top:60px;
-  font-size:1.25rem;
-  color:#aaa;
-}
+.secondary-links { gap:30px; margin-top:60px; font-size:1.25rem; color:#aaa; }
 
-a {
-  color:#fff;
-  text-decoration:none;
-  transition:color .25s ease;
-}
+a { color:#fff; text-decoration:none; transition:color .25s ease; }
 
-a.underline {
-  text-decoration:underline;
-  text-decoration-thickness:2px;
-}
+a.underline { text-decoration:underline; text-decoration-thickness:2px; }
 
 a:hover { color:#ddd; }
 
-/* Móvil */
 @media (max-width:600px) {
-  .container { padding:40px 30px; } /* padding lateral móvil 30px */
+  .container { padding:40px 30px; } /* móvil 30px lateral */
   h1 { font-size:2.5rem; margin-bottom:10px; }
   h2 { font-size:1rem; margin-bottom:40px; }
   .main-links { font-size:1.5rem; gap:20px; }
