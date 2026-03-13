@@ -20,7 +20,7 @@ body {
 body::-webkit-scrollbar { display:none; }
 
 .container {
-  max-width:650px;     /* contenido más desplazado a la derecha */
+  max-width:650px;     
   margin:0 auto;       
   display:flex;
   flex-direction:column;
@@ -31,7 +31,7 @@ body::-webkit-scrollbar { display:none; }
 
 h1 { font-size:3rem; font-weight:700; margin-bottom:20px; }
 
-h2 { font-size:1.25rem; font-weight:400; margin-bottom:60px; color:#ccc; text-transform:lowercase; }
+h2 { font-size:1.125rem; /* 18px */ font-weight:400; margin-bottom:60px; color:#ccc; text-transform:lowercase; }
 
 .main-links, .secondary-links {
   display:flex;
@@ -39,9 +39,9 @@ h2 { font-size:1.25rem; font-weight:400; margin-bottom:60px; color:#ccc; text-tr
   width:100%;
 }
 
-.main-links { gap:30px; font-size:2rem; }
+.main-links { gap:30px; font-size:20px; }
 
-.secondary-links { gap:30px; margin-top:60px; font-size:1.25rem; color:#aaa; }
+.secondary-links { gap:30px; margin-top:60px; font-size:20px; color:#aaa; }
 
 a { color:#fff; text-decoration:none; transition:color .25s ease; }
 
@@ -50,11 +50,11 @@ a.underline { text-decoration:underline; text-decoration-thickness:2px; }
 a:hover { color:#ddd; }
 
 @media (max-width:600px) {
-  .container { padding:40px 30px; } /* móvil 30px lateral */
+  .container { padding:40px 30px; }
   h1 { font-size:2.5rem; margin-bottom:10px; }
-  h2 { font-size:1rem; margin-bottom:40px; }
-  .main-links { font-size:1.5rem; gap:20px; }
-  .secondary-links { margin-top:40px; gap:20px; }
+  h2 { font-size:1rem; margin-bottom:40px; } /* 16px móvil */
+  .main-links { font-size:20px; gap:20px; }
+  .secondary-links { margin-top:40px; gap:20px; font-size:20px; }
 }
 </style>
 </head>
