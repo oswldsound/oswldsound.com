@@ -76,6 +76,66 @@ iframe {
     height: 700px;
   }
 }
+
+.faq {
+  width: 100%;
+  max-width: 800px;
+  margin: 48px auto 0;
+  border-top: 1px solid #262626;
+}
+.faq details {
+  border-bottom: 1px solid #262626;
+}
+.faq summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 19px 2px;
+  color: #f2f2f2;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 700;
+  list-style: none;
+  cursor: pointer;
+}
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+.faq summary::after {
+  content: "";
+  flex: 0 0 8px;
+  width: 8px;
+  height: 8px;
+  margin-right: 3px;
+  border-right: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  transform: rotate(45deg) translateY(-2px);
+  transition: transform .2s ease;
+}
+.faq details[open] summary::after {
+  transform: rotate(225deg) translate(-2px, -1px);
+}
+.faq p {
+  padding: 0 30px 19px 2px;
+  color: #bdbdbd;
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+@media (max-width: 600px) {
+  .faq {
+    margin-top: 36px;
+  }
+  .faq summary {
+    padding: 17px 2px;
+    font-size: 14px;
+  }
+  .faq p {
+    font-size: 13px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -92,6 +152,45 @@ iframe {
       loading="lazy"
       allow="autoplay"
     ></iframe>
+  </section>
+
+  <section class="faq" aria-label="License information">
+    <details>
+      <summary>What is the difference between Exclusive and Non-Exclusive licenses?</summary>
+      <p>Exclusive: The beat is removed from the store and no further licenses are issued. Any producer royalty share is specified in the license agreement.<br>Non-Exclusive: You can use the beat in your song, and it remains available to other artists.</p>
+    </details>
+    <details>
+      <summary>Can I release my song on streaming platforms?</summary>
+      <p>Yes. You can release your song on platforms like Spotify and Apple Music, subject to your license terms.</p>
+    </details>
+    <details>
+      <summary>What does the Basic License streams limit mean?</summary>
+      <p>The Basic License includes up to 100,000 total streams across all platforms. Contact me before reaching the limit for a discounted Unlimited License upgrade.</p>
+    </details>
+    <details>
+      <summary>What does "No Content ID" mean?</summary>
+      <p>Non-Exclusive licenses do not allow you to register the beat with YouTube Content ID.</p>
+    </details>
+    <details>
+      <summary>Do you use uncleared samples?</summary>
+      <p>No. All samples are cleared for commercial use.</p>
+    </details>
+    <details>
+      <summary>Are producer tags removed?</summary>
+      <p>Yes. All files are delivered without producer tags.</p>
+    </details>
+    <details>
+      <summary>When will I receive the files?</summary>
+      <p>Your files are available instantly after purchase on the receipt page and via email.</p>
+    </details>
+    <details>
+      <summary>How can I review the license terms before purchasing?</summary>
+      <p>Click "Add to Cart", proceed to "Checkout", and select "Review License".</p>
+    </details>
+    <details>
+      <summary>Is it possible to get a refund?</summary>
+      <p>Refunds are considered only for missing or incorrect files or duplicate orders, in accordance with BeatStars' terms and applicable law.</p>
+    </details>
   </section>
 </main>
 </body>
