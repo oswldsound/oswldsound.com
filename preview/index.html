@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#000000">
-<meta name="description" content="Oswld Sound — independent music producer and artist.">
-<title>Oswld Sound</title>
+<meta name="description" content="OS — close your eyes.">
+<title>OS</title>
 <link rel="icon" href="/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,59 +15,44 @@
 *{box-sizing:border-box}
 html{background:var(--bg);scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
-a{color:var(--link);text-decoration:none;text-underline-offset:4px;transition:color .15s ease}
+a{color:var(--link);text-decoration:none;transition:color .15s ease}
 a:hover{color:#aaa}
 main{width:min(100% - 48px,640px);margin:0 auto;padding:104px 0 112px}
 h1,h2,p{margin:0}
 h1{font-size:20px;line-height:1.35;font-weight:600;letter-spacing:-.04em}
-.intro{margin-top:22px;color:#b5b5b5;max-width:590px;line-height:1.75}
+.brand-link{color:var(--text)}
+.tagline{margin-top:22px;color:#b5b5b5;max-width:590px;line-height:1.75}
 section{margin-top:76px}
 .section-title{font-size:15px;font-weight:600;letter-spacing:-.02em;margin-bottom:18px}
 .list{list-style:none;margin:0;padding:0}
 .list li{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:8px 0}
-.list .description{color:var(--muted);text-align:right;font-size:14px}
-.inline-link{text-decoration:underline;text-decoration-color:#555;text-decoration-thickness:1px}
-.footer{margin-top:88px;padding-top:20px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px 18px;color:var(--muted);font-size:14px}
-.footer a{color:#bdbdbd}
-@media(max-width:600px){main{width:calc(100% - 40px);padding:72px 0 80px}section{margin-top:62px}.footer{margin-top:72px}}
+@media(max-width:600px){main{width:calc(100% - 40px);padding:72px 0 80px}section{margin-top:62px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
 </style>
 </head>
 <body>
 <main>
   <header>
-    <h1>Oswld Sound</h1>
-    <p class="intro">Independent music producer and artist focused on R&B and contemporary sounds. Creating music with a distinct sense of atmosphere, detail and restraint.</p>
+    <h1>OS</h1>
+    <p class="tagline">close your eyes</p>
   </header>
+
+  <section aria-labelledby="contact-title">
+    <h2 class="section-title" id="contact-title">Contact</h2>
+    <ul class="list">
+      <li><a href="mailto:os@oswldsound.com">Email</a></li>
+      <li><a href="https://www.instagram.com/oswldsound/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+      <li><a href="https://www.tiktok.com/@oswldsound" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+      <li><a href="https://www.youtube.com/@oswldsound" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+    </ul>
+  </section>
 
   <section aria-labelledby="music-title">
     <h2 class="section-title" id="music-title">Music</h2>
     <ul class="list">
-      <li><a class="inline-link" href="/preview/beats/">Beats</a><span class="description">Instrumentals & licensing</span></li>
-      <li><span>Selected work</span><span class="description">Productions & releases</span></li>
+      <li><a href="/preview/beats/">Beats</a></li>
     </ul>
   </section>
-
-  <section aria-labelledby="about-title">
-    <h2 class="section-title" id="about-title">About</h2>
-    <p class="intro" style="margin-top:0">Oswld Sound is the musical project of producer Oswaldo Zorrilla. Working across R&B and related sounds, with an emphasis on understated production and carefully considered details.</p>
-  </section>
-
-  <section aria-labelledby="contact-title">
-    <h2 class="section-title" id="contact-title">Elsewhere</h2>
-    <ul class="list">
-      <li><a href="https://www.instagram.com/oswldsound/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-      <li><a href="https://www.tiktok.com/@oswldsound" target="_blank" rel="noopener noreferrer">TikTok</a></li>
-      <li><a href="https://www.youtube.com/@oswldsound" target="_blank" rel="noopener noreferrer">YouTube</a></li>
-      <li><a href="mailto:os@oswldsound.com">Email</a></li>
-    </ul>
-  </section>
-
-  <footer class="footer">
-    <span>Oswld Sound</span>
-    <a href="/preview/beats/">Beats</a>
-    <a href="mailto:os@oswldsound.com">Contact</a>
-  </footer>
 </main>
 </body>
 </html>
