@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Beats — Oswld Sound</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#000000">
 <meta name="description" content="Listen to and license beats by Oswld Sound.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://oswldsound.com/beats/">
@@ -16,196 +16,102 @@
 <meta name="twitter:title" content="Beats — Oswld Sound">
 <meta name="twitter:description" content="Listen to and license beats by Oswld Sound.">
 <meta name="twitter:image" content="https://oswldsound.com/favicon-180x180.png">
+<title>Beats — Oswld Sound</title>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
 <link rel="shortcut icon" href="/favicon.ico">
-<meta name="theme-color" content="#000000">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;650;700&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://player.beatstars.com" crossorigin>
-<link rel="dns-prefetch" href="//player.beatstars.com">
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-html, body {
-  min-height: 100%;
-  background: #000;
-}
-body {
-  color: #fff;
-  font-family: "Helvetica Neue", "SF Pro Text", "SF Pro Display", Inter, "Segoe UI", Arial, sans-serif;
-  overflow-x: hidden;
-}
-main {
-  width: 100%;
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 64px 32px 80px;
-}
-header {
-  margin-bottom: 36px;
-}
-header a {
-  color: #e8e8e8;
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: 700;
-  transition: color .25s ease;
-}
-header a:hover {
-  color: #aaa;
-}
-.player {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-iframe {
-  display: block;
-  width: 100%;
-  max-width: 1024px;
-  height: 500px;
-  border: 0;
-}
-@media (max-width: 600px) {
-  main {
-    padding: 32px 16px 48px;
-  }
-  header {
-    margin-bottom: 24px;
-  }
-  iframe {
-    height: 500px;
-  }
-}
-
-.faq {
-  width: 100%;
-  max-width: 800px;
-  margin: 24px auto 0;
-  border-top: 1px solid #262626;
-}
-.faq details {
-  border-bottom: 1px solid #262626;
-}
-.faq summary {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 19px 2px;
-  color: #f2f2f2;
-  font-size: 15px;
-  line-height: 1.5;
-  font-weight: 700;
-  list-style: none;
-  cursor: pointer;
-}
-.faq summary:focus-visible {
-  outline: 2px solid #e8e8e8;
-  outline-offset: 4px;
-  border-radius: 2px;
-}
-.faq summary::-webkit-details-marker {
-  display: none;
-}
-.faq summary::after {
-  content: "";
-  flex: 0 0 8px;
-  width: 8px;
-  height: 8px;
-  margin-right: 3px;
-  border-right: 1px solid #aaa;
-  border-bottom: 1px solid #aaa;
-  transform: rotate(45deg) translateY(-2px);
-  transition: transform .2s ease;
-}
-.faq details[open] summary::after {
-  transform: rotate(225deg) translate(-2px, -1px);
-}
-.faq p {
-  padding: 0 30px 19px 2px;
-  color: #bdbdbd;
-  font-size: 15px;
-  line-height: 1.7;
-  font-weight: 400;
-}
-@media (max-width: 600px) {
-  .faq {
-    margin-top: 24px;
-  }
-  .faq summary {
-    padding: 17px 2px;
-    font-size: 14px;
-  }
-  .faq p {
-    font-size: 14px;
-  }
-}
-
+:root{color-scheme:dark;--bg:#000;--text:#f5f5f5;--muted:#929292;--line:#292929}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--text);text-decoration:none;transition:color .15s ease}
+a:hover{color:#aaa}
+main{width:min(100% - 48px,640px);margin:0 auto;padding:104px 0 112px}
+h1{font-size:30px;line-height:1.35;font-weight:600;letter-spacing:-.04em;margin:0}
+.brand-link{color:var(--text)}
+.tagline{margin-top:16px;color:#b5b5b5;max-width:590px;line-height:1.75}
+.player{width:100%;margin-top:46px}
+iframe{display:block;width:100%;height:500px;border:0;background:#000}
+section{margin-top:52px}
+h2{font-size:15px;font-weight:600;letter-spacing:-.02em;margin:0 0 18px;color:var(--muted)}
+.faq{}
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 0;font-size:15px;font-weight:500;line-height:1.65;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";display:block;flex:0 0 6px;width:6px;height:6px;margin:0 2px 0 0;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(45deg);transform-origin:center;align-self:center}
+details[open] summary::after{transform:rotate(225deg)}
+.answer,.answer *{color:#c6c6c6!important}.answer{padding:0 24px 18px 0;font-size:14px;line-height:1.75}
+.answer strong{color:#eee;font-weight:500}
+.answer a{color:#c6c6c6!important;text-decoration:underline}.answer a:hover{color:#c6c6c6!important;text-decoration:underline}
+@media(max-width:600px){main{width:calc(100% - 40px);padding:72px 0 80px}.player{margin-top:36px}iframe{height:500px}section{margin-top:38px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important}}
 </style>
 </head>
 <body>
 <main>
   <header>
-    <a href="/" aria-label="Oswld Sound home">OS</a>
+    <h1><a class="brand-link" href="/">OS</a></h1>
+    <p class="tagline">close your eyes</p>
   </header>
-  <section class="player" aria-label="Oswld Sound beats">
-    <iframe
-      src="https://player.beatstars.com/?storeId=145914"
-      title="Oswld Sound BeatStars player"
-      width="100%"
-      height="500"
-      allow="autoplay"
-    ></iframe>
-  </section>
 
-  <section class="faq" aria-label="License information">
-    <details>
-      <summary>What is the difference between Standard, Unlimited, and Exclusive licenses?</summary>
-      <p><strong>Standard:</strong> WAV and MP3 · 100,000 streams · 1 music video · Distribution and publishing · Live performance.<br><br><strong>Unlimited:</strong> + Multitracks · Unlimited streams · Unlimited music videos · Radio broadcast.<br><br><strong>Exclusive:</strong> + Beat removed from the store · Content ID.</p>
-    </details>
-    <details>
-      <summary>What is the difference between Exclusive and Non-Exclusive licenses?</summary>
-      <p><strong>Non-Exclusive:</strong> The beat can be licensed to other artists.<br><br><strong>Exclusive:</strong> No further licenses are issued. The producer retains the royalty share specified in the license agreement.</p>
-    </details>
-    <details>
-      <summary>Can I release my song on streaming platforms?</summary>
-      <p>Yes. You can release your song on platforms like Spotify and Apple Music, subject to your license terms.</p>
-    </details>
-    <details>
-      <summary>Can I register a Non-Exclusive beat with Content ID?</summary>
-      <p>No. Content ID registration is not permitted under Non-Exclusive licenses.</p>
-    </details>
-    <details>
-      <summary>Can I upgrade my license?</summary>
-      <p>Contact me before reaching your stream limit for a discounted upgrade to an Unlimited or Exclusive license.</p>
-    </details>
-    <details>
-      <summary>Do you use uncleared samples?</summary>
-      <p>No. All samples are cleared for commercial use.</p>
-    </details>
-    <details>
-      <summary>Are producer tags removed?</summary>
-      <p>Yes. All files are delivered without producer tags.</p>
-    </details>
-    <details>
-      <summary>When will I receive the files?</summary>
-      <p>Your files are available instantly after purchase on the receipt page and via email.</p>
-    </details>
-    <details>
-      <summary>How can I review the license terms before purchasing?</summary>
-      <p>Click "Add to Cart", proceed to "Checkout", and select "Review License".</p>
-    </details>
-    <details>
-      <summary>Is it possible to get a refund?</summary>
-      <p>Refunds are considered only for missing or incorrect files or duplicate orders, in accordance with BeatStars' terms and applicable law.</p>
-    </details>
+  <div class="player" aria-label="Oswld Sound beats">
+    <iframe src="https://player.beatstars.com/?storeId=145914" title="Oswld Sound BeatStars player" allow="autoplay"></iframe>
+  </div>
+
+  <section aria-labelledby="faq-title">
+    <h2 id="faq-title">Licensing</h2>
+    <div class="faq">
+      <details>
+        <summary>What is the difference between Standard, Unlimited, and Exclusive licenses?</summary>
+        <div class="answer"><strong>Standard:</strong> WAV and MP3 · 100,000 streams · 1 music video · Distribution and publishing · Live performance.<br><br><strong>Unlimited:</strong> + Multitracks · Unlimited streams · Unlimited music videos · Radio broadcast.<br><br><strong>Exclusive:</strong> + Beat removed from the store · Content ID.</div>
+      </details>
+      <details>
+        <summary>What is the difference between Exclusive and Non-Exclusive licenses?</summary>
+        <div class="answer"><strong>Non-Exclusive:</strong> The beat can be licensed to other artists.<br><br><strong>Exclusive:</strong> No further licenses are issued. The producer retains the royalty share specified in the license agreement.</div>
+      </details>
+      <details>
+        <summary>Can I release my song on streaming platforms?</summary>
+        <div class="answer">Yes. You can release your song on platforms like Spotify and Apple Music, subject to your license terms.</div>
+      </details>
+      <details>
+        <summary>Can I register a Non-Exclusive beat with Content ID?</summary>
+        <div class="answer">No. Content ID registration is not permitted under Non-Exclusive licenses.</div>
+      </details>
+      <details>
+        <summary>Can I upgrade my license?</summary>
+        <div class="answer">Yes. Contact me at <a href="mailto:os@oswldsound.com">os@oswldsound.com</a> before reaching your stream limit for a discounted upgrade to an Unlimited or Exclusive license.</div>
+      </details>
+      <details>
+        <summary>Do you use uncleared samples?</summary>
+        <div class="answer">No. I only use royalty-free samples cleared for commercial use.</div>
+      </details>
+      <details>
+        <summary>Can I release my song on streaming platforms?</summary>
+        <div class="answer">Yes. You can release your song on platforms like Spotify and Apple Music, subject to your license terms.</div>
+      </details>
+      <details>
+        <summary>Are producer tags removed?</summary>
+        <div class="answer">Yes. All files are delivered without producer tags.</div>
+      </details>
+      <details>
+        <summary>When will I receive the files?</summary>
+        <div class="answer">Your files are available instantly after purchase on the receipt page and via email.</div>
+      </details>
+      <details>
+        <summary>How can I review the license terms before purchasing?</summary>
+        <div class="answer">Click "Add to Cart", proceed to "Checkout", and select "Review License".</div>
+      </details>
+      <details>
+        <summary>Is it possible to get a refund?</summary>
+        <div class="answer">Refunds are considered only for missing or incorrect files or duplicate orders, in accordance with BeatStars' terms and applicable law.</div>
+      </details>
+    </div>
   </section>
 </main>
 </body>
