@@ -1,179 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Oswld Sound</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#000000">
 <meta name="description" content="Oswld Sound — close your eyes for the sound.">
-
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://oswldsound.com/">
-
 <meta property="og:type" content="website">
 <meta property="og:title" content="Oswld Sound">
 <meta property="og:description" content="close your eyes.">
 <meta property="og:url" content="https://oswldsound.com/">
 <meta property="og:image" content="https://oswldsound.com/favicon-180x180.png">
-
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Oswld Sound">
 <meta name="twitter:description" content="close your eyes.">
 <meta name="twitter:image" content="https://oswldsound.com/favicon-180x180.png">
-
-
+<title>Oswld Sound</title>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
 <link rel="shortcut icon" href="/favicon.ico">
-
-<meta name="theme-color" content="#000000">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;650;700&display=swap" rel="stylesheet">
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-  background: #000;
-}
-
-body {
-  color: #fff;
-  font-family:
-    "Helvetica Neue",
-    "SF Pro Text",
-    "SF Pro Display",
-    Inter,
-    "Segoe UI",
-    Arial,
-    sans-serif;
-  overflow-x: hidden;
-  scrollbar-width: none;
-}
-
-body::-webkit-scrollbar {
-  display: none;
-}
-
-.container {
-  max-width: 650px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 120px 0;
-}
-
-h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-h2 {
-  font-size: 1rem;
-  font-weight: 400;
-  margin-bottom: 60px;
-  color: #ccc;
-  text-transform: lowercase;
-}
-
-.main-links,
-.secondary-links {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.main-links {
-  gap: 30px;
-  font-size: 1.5rem;
-}
-
-.secondary-links {
-  gap: 30px;
-  margin-top: 60px;
-  font-size: 18px;
-  color: #aaa;
-}
-
-a {
-  color: #e8e8e8;
-  text-decoration: none;
-  transition: color .25s ease;
-  display: inline-block;
-}
-
-a.underline {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-}
-
-a:hover {
-  color: #ddd;
-}
-
-@media (max-width: 600px) {
-  .container {
-    padding: 40px 30px;
-  }
-
-  h1 {
-    font-size: 2.25rem;
-    margin-bottom: 10px;
-  }
-
-  h2 {
-    font-size: 0.875rem;
-    margin-bottom: 40px;
-  }
-
-  .main-links {
-    gap: 20px;
-  }
-
-  .secondary-links {
-    margin-top: 40px;
-    gap: 20px;
-    font-size: 18px;
-  }
-}
+:root{color-scheme:dark;--bg:#000;--text:#f5f5f5;--muted:#929292;--line:#292929;--link:#f5f5f5}
+*{box-sizing:border-box}
+html{background:var(--bg);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--link);text-decoration:none;transition:color .15s ease}
+a:hover{color:#aaa}
+main{width:min(100% - 48px,640px);margin:0 auto;padding:104px 0 112px}
+h1,h2,p{margin:0}
+h1{font-size:30px;line-height:1.35;font-weight:600;letter-spacing:-.04em}
+.brand-link{color:var(--text)}
+.tagline{margin-top:16px;color:#b5b5b5;max-width:590px;line-height:1.75}
+section{margin-top:76px}
+.section-title{font-size:15px;font-weight:600;letter-spacing:-.02em;margin-bottom:8px}
+.list{list-style:none;margin:0;padding:0}
+.list li{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:8px 0}
+.list li a{display:block;width:100%}
+section .list li a{flex:1;padding:8px 12px;margin:-8px -12px;transition:color .12s ease}
+section .list li a:hover{color:#d8d8d8}
+.beats-link{display:block!important;padding:0!important}
+.beats-link a{display:block;width:100%;padding:8px 0;color:var(--link);transition:background-color .15s ease;border-radius:2px}
+.beats-title{display:inline-block;font-size:15px;font-weight:600;text-decoration:underline;text-underline-offset:4px}
+.beats-description{display:block;color:#929292;font-size:15px;line-height:1.65;margin-top:2px}
+.beats-link a:hover{background-color:rgba(255,255,255,.035)}
+.beats-link a:focus-visible{outline:1px solid #929292;outline-offset:2px}
+@media(max-width:600px){main{width:calc(100% - 40px);padding:72px 0 80px}section{margin-top:62px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
 </style>
 </head>
-
 <body>
-<main class="container">
+<main>
   <header>
     <h1>OS</h1>
-    <h2>close your eyes</h2>
+    <p class="tagline">close your eyes</p>
   </header>
 
-  <nav class="main-links" aria-label="Main links">
-    <a href="/beats/" class="underline">
-      Beats
-    </a>
+  <nav aria-label="Music" style="margin-top:76px">
+    <ul class="list">
+      <li class="beats-link"><a href="/beats/"><span class="beats-title">Beats</span><span class="beats-description">Instrumentals for licensing.</span></a></li>
+    </ul>
   </nav>
 
-  <nav class="secondary-links" aria-label="Social and contact links">
-    <a href="mailto:os@oswldsound.com">Email</a>
-
-    <a href="https://www.instagram.com/oswldsound/" target="_blank" rel="noopener noreferrer">
-      Instagram
-    </a>
-
-    <a href="https://www.tiktok.com/@oswldsound" target="_blank" rel="noopener noreferrer">
-      TikTok
-    </a>
-
-    <a href="https://www.youtube.com/@oswldsound" target="_blank" rel="noopener noreferrer">
-      YouTube
-    </a>
-  </nav>
+  <section aria-labelledby="contact-title">
+    <h2 class="section-title" id="contact-title">Contact</h2>
+    <ul class="list">
+      <li><a href="mailto:os@oswldsound.com">Email</a></li>
+      <li><a href="https://www.instagram.com/oswldsound/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+      <li><a href="https://www.tiktok.com/@oswldsound" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+      <li><a href="https://www.youtube.com/@oswldsound" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+    </ul>
+  </section>
 </main>
 </body>
 </html>
