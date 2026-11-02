@@ -21,40 +21,10 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
 <link rel="shortcut icon" href="/favicon.ico">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;650;700&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://player.beatstars.com" crossorigin>
-<style>
-:root{color-scheme:dark;--bg:#000;--text:#f5f5f5;--muted:#929292;--line:#292929}
-*{box-sizing:border-box}
-html{background:var(--bg)}
-body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
-a{color:var(--text);text-decoration:none;transition:color .15s ease}
-a:hover{color:#aaa}
-main{width:min(100% - 48px,640px);margin:0 auto;padding:104px 0 112px}
-h1{font-size:30px;line-height:1.35;font-weight:600;letter-spacing:-.04em;margin:0}
-.brand-link{color:var(--text)}
-.tagline{margin-top:16px;color:#b5b5b5;max-width:590px;line-height:1.75}
-.player{width:100%;margin-top:46px}
-iframe{display:block;width:100%;height:500px;border:0;background:#000}
-section{margin-top:52px}
-h2{font-size:15px;font-weight:600;letter-spacing:-.02em;margin:0 0 18px;color:var(--muted)}
-.faq{}
-details{border-bottom:1px solid var(--line)}
-.faq details:last-child{border-bottom:0}
-summary{cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 0;font-size:15px;font-weight:500;line-height:1.65;list-style:none}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"";display:block;flex:0 0 6px;width:6px;height:6px;margin:0 2px 0 0;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(45deg);transform-origin:center;align-self:center}
-details[open] summary::after{transform:rotate(225deg)}
-.answer,.answer *{color:#c6c6c6!important}.answer{padding:0 24px 18px 0;font-size:14px;line-height:1.75}
-.answer strong{color:#eee;font-weight:500}
-.answer a{color:#c6c6c6!important;text-decoration:underline}.answer a:hover{color:#c6c6c6!important;text-decoration:underline}
-@media(max-width:600px){main{width:calc(100% - 40px);padding:72px 0 80px}.player{margin-top:36px}iframe{height:500px}section{margin-top:38px}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important}}
-</style>
+<link rel="stylesheet" href="../styles.css">
 </head>
-<body>
+<body class="beats-page">
 <main>
   <header>
     <h1><a class="brand-link" href="/">OS</a></h1>
@@ -91,10 +61,6 @@ details[open] summary::after{transform:rotate(225deg)}
       <details>
         <summary>Do you use uncleared samples?</summary>
         <div class="answer">No. I only use royalty-free samples cleared for commercial use.</div>
-      </details>
-      <details>
-        <summary>Can I release my song on streaming platforms?</summary>
-        <div class="answer">Yes. You can release your song on platforms like Spotify and Apple Music, subject to your license terms.</div>
       </details>
       <details>
         <summary>Are producer tags removed?</summary>
