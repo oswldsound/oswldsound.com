@@ -46,5 +46,10 @@
     </ul>
   </section>
 </main>
+<script>
+if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
+  document.querySelectorAll('.home-page a[target="_blank"]').forEach(link => link.removeAttribute("target"));
+}
+</script>
 </body>
 </html>
