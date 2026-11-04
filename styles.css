@@ -50,4 +50,5 @@ h2,p{margin:0}
   html{scroll-behavior:auto}
   *,*::before,*::after{transition:none!important}
 }
+.home-page footer,.home-page footer a{font-size:16px}
 /* Trigger GitHub Pages redeployment. */
