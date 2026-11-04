@@ -21,7 +21,7 @@ h2,p{margin:0}
 .beats-link{display:block!important;padding:0!important}
 .beats-link a{display:block;width:calc(100% + 8px);margin-left:-14px;padding:8px 14px;color:var(--link);transition:none;border-radius:2px}
 .beats-title{display:inline-block;font-size:16px;font-weight:600;text-decoration:underline;text-underline-offset:4px}
-.beats-description{display:block;color:#8E8E93;font-size:14px;line-height:1.65;margin-top:2px}
+.beats-description{display:block;color:#8E8E93;font-size:16px;line-height:1.65;margin-top:2px}
 .beats-link a:hover{background-color:rgba(255,255,255,.008)}
 .beats-link a:focus-visible{outline:1px solid #8E8E93;outline-offset:2px}
 .beats-page .player{width:100%;margin-top:var(--beats-flow-gap)}
