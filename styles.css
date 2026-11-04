@@ -1,4 +1,4 @@
-:root{--beats-flow-gap:8px;color-scheme:dark;--bg:#000;--text:#F5F5F7;--muted:#8E8E93;--line:#292929;--link:#F5F5F7}
+:root{--beats-flow-gap:16px;color-scheme:dark;--bg:#000;--text:#F5F5F7;--muted:#8E8E93;--line:#292929;--link:#F5F5F7}
 *{box-sizing:border-box}
 html{background:var(--bg);scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);font-family:"Helvetica Neue",Helvetica,Inter,Arial,sans-serif;font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
