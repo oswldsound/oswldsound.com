@@ -16,7 +16,7 @@ h2,p{margin:0}
 .list li a{display:block;width:100%}
 .home-page section{margin-top:76px}
 .home-page .section-title{font-size:15px;font-weight:600;letter-spacing:-.02em;margin-bottom:8px}
-.home-page section .list li a{flex:1;padding:8px 12px;margin:-8px -12px;transition:color .12s ease}
+.home-page section .list li a{flex:1;padding:8px 6px 8px 14px;margin:-8px -6px -8px -14px;transition:color .12s ease}
 .home-page section .list li a:hover{color:#d8d8d8}
 .beats-link{display:block!important;padding:0!important}
 .beats-link a{display:block;width:calc(100% + 8px);margin-left:-14px;padding:8px 14px;color:var(--link);transition:background-color .15s ease;border-radius:2px}
