@@ -37,7 +37,7 @@ h2,p{margin:0}
 .answer{padding:0 24px 16px 0;font-size:14px;line-height:1.75;color:#c6c6c6}
 .answer p{margin:0 0 8px}
 .answer p:last-child{margin-bottom:0}
-.answer strong{color:#eee;font-weight:500}
+.answer strong{color:#c6c6c6;font-weight:500}
 .answer a{color:#c6c6c6;text-decoration:underline;text-underline-offset:2px}
 .answer a:hover{color:#c6c6c6;text-decoration:underline}
 @media(max-width:600px){
