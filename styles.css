@@ -3,6 +3,7 @@
 html{background:var(--bg);scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);font-family:"Helvetica Neue",Helvetica,Inter,Arial,sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
 a{color:var(--link);text-decoration:none;transition:none}
+.beats-link a,.beats-page .brand-link{-webkit-tap-highlight-color:transparent}
 a:hover{color:#8E8E93}
 main{width:min(100% - 48px,640px);margin:0 auto;padding:104px 0 112px}
 h1{font-size:30px;line-height:1.35;font-weight:600;letter-spacing:-.04em;margin:0}
