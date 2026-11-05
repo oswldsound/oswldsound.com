@@ -32,6 +32,7 @@ h2,p{margin:0}
 .faq details{border-bottom:1px solid var(--line)}
 .faq details:last-child{border-bottom:0}
 .faq summary{cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:8px 0;font-size:16px;font-weight:500;line-height:1.65;list-style:none}
+.faq summary{-webkit-font-smoothing:auto}
 .faq summary::-webkit-details-marker{display:none}
 .faq summary::after{content:"";display:block;flex:0 0 6px;width:6px;height:6px;margin:0 2px 0 0;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(45deg);transform-origin:center;align-self:center}
 .faq details[open] summary::after{transform:rotate(225deg)}
