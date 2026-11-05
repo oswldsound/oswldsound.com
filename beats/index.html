@@ -38,48 +38,59 @@
   <section aria-labelledby="faq-title">
     <h2 id="faq-title">Licensing</h2>
     <div class="faq">
-      <details>
-        <summary>What is the difference between Standard, Unlimited, and Exclusive licenses?</summary>
-        <div class="answer"><p><strong>Standard:</strong> WAV and MP3 · 100,000 streams · 1 music video · Distribution and publishing · Live performance</p><p><strong>Unlimited:</strong> + Multitracks · Unlimited streams · Unlimited music videos · Radio broadcast</p><p><strong>Exclusive:</strong> + Beat removed from the store · Content ID</p></div>
-      </details>
-      <details>
-        <summary>What is the difference between Exclusive and Non-Exclusive licenses?</summary>
-        <div class="answer"><p><strong>Non-Exclusive:</strong> The beat can be licensed to other artists.</p><p><strong>Exclusive:</strong> No further licenses are issued. The producer retains the royalty share specified in the license agreement.</p></div>
-      </details>
-      <details>
-        <summary>Can I release my song on streaming platforms?</summary>
-        <div class="answer">Yes. You can release your song on platforms like Spotify and Apple Music, subject to your license terms.</div>
-      </details>
-      <details>
-        <summary>Can I register a Non-Exclusive beat with Content ID?</summary>
-        <div class="answer">No. Content ID registration is not permitted under Non-Exclusive licenses.</div>
-      </details>
-      <details>
-        <summary>Can I upgrade my license?</summary>
-        <div class="answer">Yes. You can get a discounted upgrade to an Unlimited or Exclusive license before reaching your streaming limit by contacting me at <a href="mailto:os@oswldsound.com">os@oswldsound.com</a>.</div>
-      </details>
-      <details>
-        <summary>Do you use uncleared samples?</summary>
-        <div class="answer">No. I only use royalty-free samples cleared for commercial use.</div>
-      </details>
-      <details>
-        <summary>Are producer tags removed?</summary>
-        <div class="answer">Yes. All files are delivered without producer tags.</div>
-      </details>
-      <details>
-        <summary>When will I receive the files?</summary>
-        <div class="answer">Your files are available instantly after purchase on the receipt page and via email.</div>
-      </details>
-      <details>
-        <summary>How can I review the license terms before purchasing?</summary>
-        <div class="answer">Click "Add to Cart", proceed to "Checkout", and select "Review License".</div>
-      </details>
-      <details>
-        <summary>Is it possible to get a refund?</summary>
-        <div class="answer">Refunds are considered only for missing or incorrect files or duplicate orders, in accordance with BeatStars' terms and applicable law.</div>
-      </details>
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-1">What is the difference between Standard, Unlimited, and Exclusive licenses?</button>
+        <div class="answer" id="faq-answer-1" hidden><p><strong>Standard:</strong> WAV and MP3 · 100,000 streams · 1 music video · Distribution and publishing · Live performance</p><p><strong>Unlimited:</strong> + Multitracks · Unlimited streams · Unlimited music videos · Radio broadcast</p><p><strong>Exclusive:</strong> + Beat removed from the store · Content ID</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-2">What is the difference between Exclusive and Non-Exclusive licenses?</button>
+        <div class="answer" id="faq-answer-2" hidden><p><strong>Non-Exclusive:</strong> The beat can be licensed to other artists.</p><p><strong>Exclusive:</strong> No further licenses are issued. The producer retains the royalty share specified in the license agreement.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-3">Can I release my song on streaming platforms?</button>
+        <div class="answer" id="faq-answer-3" hidden>Yes. You can release your song on platforms like Spotify and Apple Music, subject to your license terms.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-4">Can I register a Non-Exclusive beat with Content ID?</button>
+        <div class="answer" id="faq-answer-4" hidden>No. Content ID registration is not permitted under Non-Exclusive licenses.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-5">Can I upgrade my license?</button>
+        <div class="answer" id="faq-answer-5" hidden>Yes. You can get a discounted upgrade to an Unlimited or Exclusive license before reaching your streaming limit by contacting me at <a href="mailto:os@oswldsound.com">os@oswldsound.com</a>.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-6">Do you use uncleared samples?</button>
+        <div class="answer" id="faq-answer-6" hidden>No. I only use royalty-free samples cleared for commercial use.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-7">Are producer tags removed?</button>
+        <div class="answer" id="faq-answer-7" hidden>Yes. All files are delivered without producer tags.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-8">When will I receive the files?</button>
+        <div class="answer" id="faq-answer-8" hidden>Your files are available instantly after purchase on the receipt page and via email.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-9">How can I review the license terms before purchasing?</button>
+        <div class="answer" id="faq-answer-9" hidden>Click "Add to Cart", proceed to "Checkout", and select "Review License".</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-10">Is it possible to get a refund?</button>
+        <div class="answer" id="faq-answer-10" hidden>Refunds are considered only for missing or incorrect files or duplicate orders, in accordance with BeatStars' terms and applicable law.</div>
+      </div>
     </div>
   </section>
 </main>
+
+  <script>
+    document.querySelectorAll(".faq-question").forEach((button) => {
+      button.addEventListener("click", () => {
+        const answer = document.getElementById(button.getAttribute("aria-controls"));
+        const isOpen = button.getAttribute("aria-expanded") === "true";
+        button.setAttribute("aria-expanded", String(!isOpen));
+        answer.hidden = isOpen;
+      });
+    });
+  </script>
 </body>
 </html>
