@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="Escucha y adquiere licencias de beats de Oswld Sound.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://oswldsound.com/es/beats/">
+<link rel="alternate" hreflang="en" href="https://oswldsound.com/beats/">
+<link rel="alternate" hreflang="es" href="https://oswldsound.com/es/beats/">
+<link rel="alternate" hreflang="x-default" href="https://oswldsound.com/beats/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Beats — Oswld Sound">
+<meta property="og:description" content="Escucha y adquiere licencias de beats de Oswld Sound.">
+<meta property="og:url" content="https://oswldsound.com/es/beats/">
+<meta property="og:image" content="https://oswldsound.com/favicon-180x180.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Beats — Oswld Sound">
+<meta name="twitter:description" content="Escucha y adquiere licencias de beats de Oswld Sound.">
+<meta name="twitter:image" content="https://oswldsound.com/favicon-180x180.png">
+<title>Beats – Oswld Sound</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="preconnect" href="https://player.beatstars.com" crossorigin>
+<link rel="stylesheet" href="../../styles.css">
+<script>
+(function () {
+  let saved = null;
+  try { saved = localStorage.getItem("oswld-language"); } catch (e) {}
+  const preferred = saved || (/^es(?:-|$)/i.test(navigator.language || "") ? "es" : "en");
+  const spanishPaths = { "/": "/es/", "/beats/": "/es/beats/" };
+  if (preferred === "es" && spanishPaths[location.pathname]) {
+    location.replace(spanishPaths[location.pathname]);
+    return;
+  }
+  document.addEventListener("click", function (event) {
+    const link = event.target.closest("[data-language]");
+    if (link) {
+      try { localStorage.setItem("oswld-language", link.getAttribute("data-language")); } catch (e) {}
+    }
+  });
+})();
+</script>
+</head>
+<body class="beats-page">
+<main>
+  <nav class="language-switch" aria-label="Idioma"><a href="/beats/" lang="en" data-language="en">EN</a><span aria-hidden="true">/</span><a href="/es/beats/" lang="es" aria-current="page" data-language="es">ES</a></nav>
+  <header>
+    <h1><a class="brand-link" href="/es/">OS</a></h1>
+    <p class="tagline">close your eyes</p>
+  </header>
+
+  <div class="player" aria-label="Beats de Oswld Sound">
+    <iframe src="https://player.beatstars.com/?storeId=145914" title="Reproductor de BeatStars de Oswld Sound" allow="autoplay"></iframe>
+  </div>
+
+  <section aria-labelledby="faq-title">
+    <h2 id="faq-title">Licencias</h2>
+    <div class="faq">
+      <details>
+        <summary>¿Qué significa uso exclusivo?</summary>
+        <div class="answer">El beat se licencia en exclusiva a un solo artista y no se concederán nuevas licencias después de la compra. Obtienes la propiedad íntegra de la grabación (el máster), mientras que la composición musical sigue compartida según los porcentajes establecidos en el contrato. Después de la compra, el beat se retira de la tienda.</div>
+      </details>
+      <details>
+        <summary>¿Cómo se reparten las regalías?</summary>
+        <div class="answer">Recibes el 50 % de la parte de autor y el 50 % de la parte editorial. Yo conservo el 50 % de la parte de autor, mientras que BeatStars recibe el 50 % de la parte editorial. Además, recibo un 3 % de los ingresos netos generados por la explotación de los nuevos másteres.</div>
+      </details>
+      <details>
+        <summary>¿Puedo publicar mi canción en plataformas de streaming?</summary>
+        <div class="answer">Sí. Puedes publicar tu canción en plataformas como Spotify y Apple Music, de acuerdo con las condiciones de tu licencia.</div>
+      </details>
+      <details>
+        <summary>¿Puedo registrar mi canción en Content ID?</summary>
+        <div class="answer">Sí. A diferencia de las licencias no exclusivas, las licencias exclusivas te permiten registrar tu canción en Content ID.</div>
+      </details>
+      <details>
+        <summary>¿Utilizas samples sin autorización?</summary>
+        <div class="answer">No. Solo utilizo samples libres de regalías y autorizados para uso comercial.</div>
+      </details>
+    </div>
+  </section>
+
+  <section aria-labelledby="purchasing-title">
+    <h2 id="purchasing-title">Compras</h2>
+    <div class="faq">
+      <details>
+        <summary>¿Cómo puedo comprar un beat y consultar las condiciones de la licencia?</summary>
+        <div class="answer">Haz clic en «ADD» en el beat que quieras, continúa hasta «Checkout» y selecciona «Review License» para leer las condiciones antes de completar la compra.</div>
+      </details>
+      <details>
+        <summary>¿Qué archivos incluye la compra?</summary>
+        <div class="answer">La compra incluye archivos WAV y MP3 sin tag, pistas individuales (stems), un documento con información del beat y un contrato de licencia independiente.</div>
+      </details>
+      <details>
+        <summary>¿Cómo recibo los archivos?</summary>
+        <div class="answer">Tendrás acceso inmediato a los archivos después de la compra, tanto en la página del recibo como por correo electrónico.</div>
+      </details>
+      <details>
+        <summary>¿Se admiten devoluciones?</summary>
+        <div class="answer">Solo se contemplan devoluciones en caso de archivos ausentes o incorrectos, o pedidos duplicados, de acuerdo con las condiciones de BeatStars y la legislación aplicable.</div>
+      </details>
+    </div>
+  </section>
+
+  <section aria-labelledby="custom-title">
+    <h2 id="custom-title">A medida</h2>
+    <div class="faq">
+      <details>
+        <summary>¿Aceptas encargos de producción personalizados?</summary>
+        <div class="answer">Sí. Escríbeme a <a href="mailto:os@oswldsound.com">os@oswldsound.com</a>.</div>
+      </details>
+    </div>
+  </section>
+</main>
+</body>
+</html>
