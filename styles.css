@@ -55,3 +55,7 @@ h2,p{margin:0}
 }
 .home-page footer,.home-page footer a{font-size:16px}
 /* Trigger GitHub Pages redeployment. */
+
+/* Keep the beats page ending compact without changing other pages. */
+.beats-page main{padding-bottom:40px}
+@media(max-width:600px){.beats-page main{padding-bottom:36px}}
