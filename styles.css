@@ -63,3 +63,6 @@ h2,p{margin:0}
 /* Keep the beats page ending compact without changing other pages. */
 .beats-page main{padding-bottom:16px}
 @media(max-width:600px){.beats-page main{padding-bottom:16px}}
+
+/* Prevent scrolling on both language versions of the homepage. */
+html:has(body.home-page),body.home-page{height:100%;overflow:hidden;overscroll-behavior:none}
