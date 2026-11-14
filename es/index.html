@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="Oswld Sound — cierra los ojos y escucha.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://oswldsound.com/es/">
+<link rel="alternate" hreflang="en" href="https://oswldsound.com/">
+<link rel="alternate" hreflang="es" href="https://oswldsound.com/es/">
+<link rel="alternate" hreflang="x-default" href="https://oswldsound.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Oswld Sound">
+<meta property="og:description" content="close your eyes.">
+<meta property="og:url" content="https://oswldsound.com/es/">
+<meta property="og:image" content="https://oswldsound.com/favicon-180x180.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Oswld Sound">
+<meta name="twitter:description" content="close your eyes.">
+<meta name="twitter:image" content="https://oswldsound.com/favicon-180x180.png">
+<title>Oswld Sound</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="stylesheet" href="/styles.css?v=20261104">
+<script>
+(function () {
+  let saved = null;
+  try { saved = localStorage.getItem("oswld-language"); } catch (e) {}
+  const preferred = saved || (/^es(?:-|$)/i.test(navigator.language || "") ? "es" : "en");
+  const spanishPaths = { "/": "/es/", "/beats/": "/es/beats/" };
+  if (preferred === "es" && spanishPaths[location.pathname]) {
+    location.replace(spanishPaths[location.pathname]);
+    return;
+  }
+  document.addEventListener("click", function (event) {
+    const link = event.target.closest("[data-language]");
+    if (link) {
+      try { localStorage.setItem("oswld-language", link.getAttribute("data-language")); } catch (e) {}
+    }
+  });
+})();
+</script>
+</head>
+<body class="home-page">
+<main>
+  <nav class="language-switch" aria-label="Idioma"><a href="/" lang="en" data-language="en">EN</a><span aria-hidden="true">/</span><a href="/es/" lang="es" aria-current="page" data-language="es">ES</a></nav>
+  <header>
+    <h1>OS</h1>
+    <p class="tagline">close your eyes</p>
+  </header>
+
+  <nav aria-label="Música">
+    <ul class="list">
+      <li class="beats-link"><a href="/es/beats/"><span class="beats-title">Beats</span><span class="beats-description">Para uso exclusivo.</span></a></li>
+    </ul>
+  </nav>
+
+  <section aria-labelledby="contact-title">
+    <h2 class="section-title" id="contact-title">Contacto</h2>
+    <ul class="list">
+      <li><a href="mailto:os@oswldsound.com">Correo electrónico</a></li>
+      <li><a href="https://www.instagram.com/oswldsound/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+      <li><a href="https://www.tiktok.com/@oswldsound" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+      <li><a href="https://www.youtube.com/@oswldsound" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+    </ul>
+  </section>
+</main>
+<script>
+if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
+  document.querySelectorAll('.home-page a[target="_blank"]').forEach(link => link.removeAttribute("target"));
+}
+</script>
+</body>
+</html>
