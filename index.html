@@ -7,6 +7,9 @@
 <meta name="description" content="Oswld Sound — close your eyes for the sound.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://oswldsound.com/">
+<link rel="alternate" hreflang="en" href="https://oswldsound.com/">
+<link rel="alternate" hreflang="es" href="https://oswldsound.com/es/">
+<link rel="alternate" hreflang="x-default" href="https://oswldsound.com/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Oswld Sound">
 <meta property="og:description" content="close your eyes.">
@@ -22,9 +25,29 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
 <link rel="shortcut icon" href="/favicon.ico">
 <link rel="stylesheet" href="/styles.css?v=20261104">
+<script>
+(function () {
+  let saved = null;
+  try { saved = localStorage.getItem("oswld-language"); } catch (e) {}
+  const preferred = saved || (/^es(?:-|$)/i.test(navigator.language || "") ? "es" : "en");
+  const spanishPaths = { "/": "/es/", "/beats/": "/es/beats/" };
+  if (preferred === "es" && spanishPaths[location.pathname]) {
+    location.replace(spanishPaths[location.pathname]);
+    return;
+  }
+  document.addEventListener("click", function (event) {
+    const link = event.target.closest("[data-language]");
+    if (link) {
+      try { localStorage.setItem("oswld-language", link.getAttribute("data-language")); } catch (e) {}
+    }
+  });
+})();
+</script>
 </head>
 <body class="home-page">
 <main>
+  <nav class="language-switch" aria-label="Language"><a href="/"
+  lang="en" aria-current="page" data-language="en">EN</a><span aria-hidden="true">/</span><a href="/es/" lang="es" data-language="es">ES</a></nav>
   <header>
     <h1>OS</h1>
     <p class="tagline">close your eyes</p>
