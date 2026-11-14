@@ -7,6 +7,9 @@
 <meta name="description" content="Listen to and license beats by Oswld Sound.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://oswldsound.com/beats/">
+<link rel="alternate" hreflang="en" href="https://oswldsound.com/beats/">
+<link rel="alternate" hreflang="es" href="https://oswldsound.com/es/beats/">
+<link rel="alternate" hreflang="x-default" href="https://oswldsound.com/beats/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Beats — Oswld Sound">
 <meta property="og:description" content="Listen to and license beats by Oswld Sound.">
@@ -23,9 +26,29 @@
 <link rel="shortcut icon" href="/favicon.ico">
 <link rel="preconnect" href="https://player.beatstars.com" crossorigin>
 <link rel="stylesheet" href="../styles.css">
+<script>
+(function () {
+  let saved = null;
+  try { saved = localStorage.getItem("oswld-language"); } catch (e) {}
+  const preferred = saved || (/^es(?:-|$)/i.test(navigator.language || "") ? "es" : "en");
+  const spanishPaths = { "/": "/es/", "/beats/": "/es/beats/" };
+  if (preferred === "es" && spanishPaths[location.pathname]) {
+    location.replace(spanishPaths[location.pathname]);
+    return;
+  }
+  document.addEventListener("click", function (event) {
+    const link = event.target.closest("[data-language]");
+    if (link) {
+      try { localStorage.setItem("oswld-language", link.getAttribute("data-language")); } catch (e) {}
+    }
+  });
+})();
+</script>
 </head>
 <body class="beats-page">
 <main>
+  <nav class="language-switch" aria-label="Language"><a href="/beats/"
+  lang="en" aria-current="page" data-language="en">EN</a><span aria-hidden="true">/</span><a href="/es/beats/" lang="es" data-language="es">ES</a></nav>
   <header>
     <h1><a class="brand-link" href="/">OS</a></h1>
     <p class="tagline">close your eyes</p>
