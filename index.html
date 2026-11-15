@@ -25,25 +25,8 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
 <link rel="shortcut icon" href="/favicon.ico">
 <style>html,body{background:#000;color-scheme:dark}</style>
-<link rel="stylesheet" href="/styles.css?v=20261114">
-<script>
-(function () {
-  let saved = null;
-  try { saved = localStorage.getItem("oswld-language"); } catch (e) {}
-  const preferred = saved || (/^es(?:-|$)/i.test(navigator.language || "") ? "es" : "en");
-  const spanishPaths = { "/": "/es/", "/beats/": "/es/beats/" };
-  if (preferred === "es" && spanishPaths[location.pathname]) {
-    location.replace(spanishPaths[location.pathname]);
-    return;
-  }
-  document.addEventListener("click", function (event) {
-    const link = event.target.closest("[data-language]");
-    if (link) {
-      try { localStorage.setItem("oswld-language", link.getAttribute("data-language")); } catch (e) {}
-    }
-  });
-})();
-</script>
+<link rel="stylesheet" href="/styles.css?v=20261115">
+<script src="/language.js"></script>
 </head>
 <body class="home-page">
 <main>
