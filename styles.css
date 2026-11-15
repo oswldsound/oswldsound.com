@@ -49,20 +49,14 @@ h2,p{margin:0}
 .answer a:hover{color:var(--text);text-decoration:underline}
 @media(max-width:600px){
   main{width:calc(100% - 40px);padding:72px 0 72px}
-  .home-page nav:not(.language-switch){margin-top:76px}
   .home-page section{margin-top:62px}
-  .beats-page iframe{height:500px}
 }
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{transition:none!important}
 }
-.home-page footer,.home-page footer a{font-size:16px}
-/* Trigger GitHub Pages redeployment. */
-
-/* Keep the beats page ending compact without changing other pages. */
+/* Keep the beats page ending compact. */
 .beats-page main{padding-bottom:16px}
-@media(max-width:600px){.beats-page main{padding-bottom:16px}}
 
-/* Prevent scrolling on both language versions of the homepage. */
+/* Hide the homepage scrollbar without disabling native scrolling or pull-to-refresh. */
 html:has(body.home-page){scrollbar-width:none}html:has(body.home-page)::-webkit-scrollbar{display:none}
