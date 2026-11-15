@@ -65,4 +65,4 @@ h2,p{margin:0}
 @media(max-width:600px){.beats-page main{padding-bottom:16px}}
 
 /* Prevent scrolling on both language versions of the homepage. */
-html:has(body.home-page){height:100%;overflow-x:hidden;overflow-y:auto;scrollbar-width:none}html:has(body.home-page)::-webkit-scrollbar{display:none}body.home-page{min-height:calc(100vh + 1px);overflow-x:hidden;overflow-y:visible;overscroll-behavior-y:auto}
+html:has(body.home-page){scrollbar-width:none}html:has(body.home-page)::-webkit-scrollbar{display:none}
